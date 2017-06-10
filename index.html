@@ -3,39 +3,42 @@
   <head>
     <title>Simple Calculator</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <style>
-    </style>
   </head>
-  
   <body>
-    <div id="calculator">
-	<!-- Screen and clear key -->
-	<div class="top">
-		<span class="clear">C</span>
-		<div class="screen"></div>
-	</div>
-	
-	<div class="keys">
-		<!-- operators and other keys -->
-		<span>7</span>
-		<span>8</span>
-		<span>9</span>
-		<span class="operator">/</span>
-		<span>4</span>
-		<span>5</span>
-		<span>6</span>
-		<span class="operator">x</span>
-		<span>1</span>
-		<span>2</span>
-		<span>3</span>
-		<span class="operator">-</span> 
-		<span>0</span>
-		<span>.</span>
-		<span class="eval">=</span>
-		<span class="operator">+</span>
-	</div>
-</div>
-    
-    <script type="text/javascript" src="main.js"></script>
+    <div id="calculator_container">
+    <!-- Clear key and Display -->
+      <div class="top_row">
+        <div class="clear">C</div>
+        <div class="screen"></div>
+      </div>
+      <!-- operators and other keys -->
+      <div class="keys">
+        <div class="second_row">
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span class="operator">/</span>
+        </div>
+        <div class="third_row">
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span class="operator">x</span>
+        </div>
+        <div class="fourth_row">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span class="operator">-</span>
+        </div>
+        <div class="fifth_row">
+        <span>0</span>
+        <span>.</span>
+        <span class="eval">=</span>
+        <span class="operator">+</span>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
