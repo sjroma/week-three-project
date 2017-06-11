@@ -1,18 +1,15 @@
-/*
 * {
   border: 0;
   box-sizing: border-box;
   outline: 0;
   padding: 0;
 }
-*/
 
 main {
   display: flex;
 }
 
 .container {
-/*  border: 1px solid black;*/
   font: 25px 'Ariel', sans-serif;
   font-weight: 100;
   height: auto;
@@ -21,28 +18,36 @@ main {
 }
 
 .top_row {
+  border: .5px solid #91CA86;
   background-color: #61B34F;
-  border-bottom-color: #91CA86;
   display: flex;
   width: 400px;
 }
 
 .clear {
-  color: #FFF; 
+  align-items: center;
+  border-right: 2px solid #91CA86;
+  color: #FFF;
+  display: flex;
   height: 100px;
+  justify-content: center;
   width: 25%;
 }
 
 .screen {
+  color: #FFF;
   height: 100px;
   width: 75%;
 }
 
 span {
+  align-items: center;
   background-color: #61B34F;
-  border-color: #91CA86;
+  border: .5px solid #91CA86;
   color: #FFF;
+  display: flex;
   height: 100px;
+  justify-content: center;
   width: 100px;
 }
 
