@@ -1,0 +1,91 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+}
+
+.container {
+  /* Ariel, Helvetica, Verdana */
+  font: 25px 'Ariel', sans-serif;
+  font-weight: 100;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.top_row {
+  background-color: #61B34F;
+  border: .5px solid #91CA86;
+  display: flex;
+  width: 400px;
+}
+
+.clear {
+  align-items: center;
+  border-right: 2px solid #91CA86;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 50%;
+}
+
+.screen {
+  color: #FFF;
+  height: 100px;
+  width: 100%;
+}
+
+span {
+  align-items: center;
+  background-color: #61B34F;
+  border: .5px solid #91CA86;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  width: 100px;
+}
+
+span:hover{
+  color: #FFF;
+}
+
+.second_row {
+  display: flex;
+}
+
+.third_row {
+  display: flex;
+}
+
+.fourth_row {
+  display: flex;
+}
+
+.fifth_row {
+  display: flex;
+}
+
+.sixth_row {
+  display: flex;
+}
+
+.eval {
+}
+
+.operator {
+  background-color: #82C276;
+  color: #000;
+}
+
+.clear:hover, .eval:hover {
+  background-color: #82C276;
+}
