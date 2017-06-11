@@ -10,6 +10,7 @@ main {
 }
 
 .container {
+  /* Ariel, Helvetica, Verdana */
   font: 25px 'Ariel', sans-serif;
   font-weight: 100;
   height: auto;
@@ -18,8 +19,8 @@ main {
 }
 
 .top_row {
-  border: .5px solid #91CA86;
   background-color: #61B34F;
+  border: .5px solid #91CA86;
   display: flex;
   width: 400px;
 }
@@ -28,6 +29,7 @@ main {
   align-items: center;
   border-right: 2px solid #91CA86;
   color: #FFF;
+  cursor: pointer;
   display: flex;
   height: 100px;
   justify-content: center;
@@ -45,10 +47,15 @@ span {
   background-color: #61B34F;
   border: .5px solid #91CA86;
   color: #FFF;
+  cursor: pointer;
   display: flex;
   height: 100px;
   justify-content: center;
   width: 100px;
+}
+
+span:hover{
+  color: #FFF;
 }
 
 .second_row {
