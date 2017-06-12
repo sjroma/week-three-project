@@ -1,34 +1,16 @@
-// Get all the operator keys from document (/, x, -, +)
+// Store input as user presses number(s) and/or decimal ("span") and display them
 
 
 
-// Add onclick event to all the keys and perform operations
+// When an "operator" key is pressed clear the display and store the "operator" key
 
 
 
-// Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
-// If clear key is pressed, erase everything
+// When "eval" key is pressed, calculate and display the result
 
 
 
-// If eval key is pressed, calculate and display the result
-
-
-
-// Replace all instances of x and ÷ with * and / respectively. This can be done easily using regex and the 'g' tag which will replace all instances of the matched character/substring
-
-
-
-// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
-
-
-
-// Basic functionality of the calculator is complete. But there are some problems like 
-// 1. No two operators should be added consecutively.
-// 2. The equation shouldn't start from an operator except minus
-// 3. not more than 1 decimal should be there in a number
-		
-// We'll fix these issues using some simple checks
-
-
-
+// Potential issues/problems;
+// 1. No two operators should be selected consecutively
+// 2. The equation shouldn't start with an operator except minus
+// 3. No more than one decimal should be in a number
