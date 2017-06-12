@@ -1,4 +1,4 @@
-// Get all the operator keys from document
+// Get all the operator keys from document (/, x, -, +)
 
 
 
