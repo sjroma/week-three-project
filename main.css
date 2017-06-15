@@ -84,6 +84,6 @@ button:hover{
   color: #000;
 }
 
-.clear:hover, .eval:hover {
+#clear:hover, #equals:hover {
   background-color: #82C276;
 }

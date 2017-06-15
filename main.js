@@ -32,6 +32,7 @@ var equals = document.getElementById("equals");
 //console.log("equals:", equals);
 var numsClicked = [];
 var operator;
+var firstEntry = [];
 
 for (i=0; i < nums.length; i++) {
   // 1. show clicked num in display
@@ -48,17 +49,25 @@ for (i=0; i < operators.length; i++) {
   operators[i].addEventListener('click', function(event) {
     display.innerHTML = event.target.innerHTML;
     operator = display.innerHTML;
+    firstEntry = firstEntry.concat(numsClicked);
+    numsClicked = [];
     console.log("operator:", operator);
+    console.log("firstEntry:", firstEntry);
+    console.log("numsClicked:", numsClicked);
   })  
 }
 
   equals.addEventListener('click', function() {
-    display.innerHTML = eval(numsClicked[0] + operator + numsClicked[1]);
+    firstEntry = firstEntry.join("");
+    numsClicked = numsClicked.join("");
+    console.log("numsClickedJoined:", numsClicked);
+    display.innerHTML = eval(firstEntry + operator + numsClicked);
     //console.log("numsClicked[0];", numsClicked[0]);
   })
 
   clear.addEventListener('click', function() {
     display.innerHTML = "";
     numsClicked = [];
+    firstEntry = [];
     console.log("numsArray:", numsClicked);
   })
