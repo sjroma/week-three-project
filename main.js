@@ -1,14 +1,8 @@
-// Store input as user presses number(s) and/or decimal ("span") and display them
-
-
+// Store input as user presses number(s) and/or decimal and display them
 
 // When an "operator" key is pressed clear the display and store the "operator" key
 
-
-
 // When "eval" key is pressed, calculate and display the result
-
-
 
 // Potential issues/problems;
 // 1. No two operators should be selected consecutively
@@ -23,31 +17,37 @@
 //});
 
 var nums = document.getElementsByClassName("num");
-var screen = document.getElementById("display");
-
-var total = 0;
-var tempNumber = "";
+//console.log("nums:", nums);
+var display = document.getElementById("display");
+//console.log("screen:", screen);
+var operators = document.getElementsByClassName("operator")
+//console.log("operators:", operators);
+var clear = document.getElementById("clear");
+//console.log("clear:", clear);
+var decimal = document.getElementById("decimal");
+//console.log("decimal:", decimal);
+var equals = document.getElementById("equals");
+//console.log("equals:", equals);
+var numsClicked = [];
 var operator;
 
-for (var num of nums) {
-  num.addEventListener('click', handleClick);
+for (i=0; i < nums.length; i++) {
+  // 1. show clicked num in display
+  // 2. store clicked num
+  nums[i].addEventListener('click', function(event) {
+    display.innerHTML = event.target.innerHTML;
+    numsClicked.push(display.innerHTML);
+    console.log("numsClicked:", numsClicked);
+
+  })  
 }
 
-function handleClick(event) {
-  tempNumber += event.target.value;
-  results.value = tempNumber;
-  console.log(tempNumber);
-  
-  document.getElementById('add').addEventListener
-    op = '+';
-    total += parseInt(tempNumber);
-    tempNumber = "";
-};
+for (i=0; i < operators.length; i++) {
 
-document.getElementById('equals').addEventListener
-  if(op === "+") {
-    total += parseInt(tempNumber);
-  }
-results.value = total;
-tempNumber = "";
+  operators[i].addEventListener('click', function(event) {
+    display.innerHTML = event.target.innerHTML;
+    operators.push(display.innerHTML);
+    console.log("operator:", operators);
 
+  })  
+}
