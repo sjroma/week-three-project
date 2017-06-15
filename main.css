@@ -37,9 +37,12 @@ main {
   width: 25%;
 }
 
-.screen {
+#display {
+  align-items: center;
   color: #FFF;
+  display: flex;
   height: 100px;
+  justify-content: flex-end;
   width: 75%;
 }
 

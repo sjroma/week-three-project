@@ -40,7 +40,6 @@ for (i=0; i < nums.length; i++) {
     display.innerHTML = event.target.innerHTML;
     numsClicked.push(display.innerHTML);
     console.log("numsClicked:", numsClicked);
-
   })  
 }
 
@@ -50,6 +49,16 @@ for (i=0; i < operators.length; i++) {
     display.innerHTML = event.target.innerHTML;
     operator = display.innerHTML;
     console.log("operator:", operator);
-
   })  
 }
+
+  equals.addEventListener('click', function() {
+    display.innerHTML = eval(numsClicked[0] + operator + numsClicked[1]);
+    //console.log("numsClicked[0];", numsClicked[0]);
+  })
+
+  clear.addEventListener('click', function() {
+    display.innerHTML = "";
+    numsClicked = [];
+    console.log("numsArray:", numsClicked);
+  })
