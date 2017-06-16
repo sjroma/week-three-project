@@ -1,9 +1,6 @@
 // Store input as user presses number(s) and/or decimal and display them
-
 // When an "operator" key is pressed clear the display and store the "operator" key
-
 // Store input as user presses number(s) and/or decimal and display them
-
 // When "eval" key is pressed, calculate and display the result
 
 // Potential issues/problems;
@@ -33,6 +30,7 @@ var equals = document.getElementById("equals");
 var numsClicked = [];
 var operator;
 var firstEntry = [];
+var screen = [];
 
 for (i=0; i < nums.length; i++) {
   // 1. show clicked num in display
@@ -40,7 +38,9 @@ for (i=0; i < nums.length; i++) {
   nums[i].addEventListener('click', function(event) {
     display.innerHTML = event.target.innerHTML;
     numsClicked.push(display.innerHTML);
-    console.log("numsClicked:", numsClicked);
+    screen = numsClicked.join("");
+    console.log("numsClicked1:", numsClicked);
+    console.log("screen:", screen);
   })  
 }
 
@@ -53,7 +53,7 @@ for (i=0; i < operators.length; i++) {
     numsClicked = [];
     console.log("operator:", operator);
     console.log("firstEntry:", firstEntry);
-    console.log("numsClicked:", numsClicked);
+    console.log("numsClicked2:", numsClicked);
   })  
 }
 
