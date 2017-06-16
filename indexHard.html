@@ -7,44 +7,41 @@
   <body>
     <main>
     <div class="container">
-    <!-- Display -->
+      <!-- Display -->
       <div class="top_row">
-        <div class="screen"></div>
+        <div id="display"></div>
       </div>
       <!-- operators and other keys -->
       <div class="keys">
         <div class="second_row">
-          <span class="clear">C</span>
-          <span class="operator">Mod</span>
+          <button id="clear" value="c">C</button>
+          <button class="operator" id="mod">mod</button>
           <!-- square root symbol -->
-          <span class="operator">&#8730;</span>
+          <button class="operator" id="sqRoot">&#8730;</button>
         </div>
         <div class="third_row">
-          <span>7</span>
-          <span>8</span>
-          <span>9</span>
-          <!-- division symbol -->
-          <span class="operator">&#247;</span>
+          <button class="num" value="7">7</button>
+          <button class="num" value="8">8</button>
+          <button class="num" value="9">9</button>
+          <button class="operator" id="divide">/</button>
         </div>
         <div class="fourth_row">
-          <span>4</span>
-          <span>5</span>
-          <span>6</span>
-          <!-- multiply symbol -->
-          <span class="operator">&#215;</span>
+          <button class="num" value="4">4</button>
+          <button class="num" value="5">5</button>
+          <button class="num" value="6">6</button>
+          <button class="operator" id="multiply">*</button>
         </div>
         <div class="fifth_row">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <!-- subtract symbol -->
-          <span class="operator">&#8722;</span>
+          <button class="num" value="1">1</button>
+          <button class="num" value="2">2</button>
+          <button class="num" value="3">3</button>
+          <button class="operator" id="subtract">-</button>
         </div>
         <div class="sixth_row">
-        <span>0</span>
-        <span>.</span>
-        <span class="eval">=</span>
-        <span class="operator">+</span>
+        <button class="num" value="0">0</button>
+        <button class="num" id="decimal">.</button>
+        <button id="equals">=</button>
+        <button class="operator" id="add">+</button>
         </div>
       </div>
     </div>
