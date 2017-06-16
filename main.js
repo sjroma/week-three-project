@@ -19,7 +19,7 @@ var nums = document.getElementsByClassName("num");
 //console.log("nums:", nums);
 var display = document.getElementById("display");
 //console.log("screen:", screen);
-var operators = document.getElementsByClassName("operator")
+var operators = document.getElementsByClassName("operator");
 //console.log("operators:", operators);
 var clear = document.getElementById("clear");
 //console.log("clear:", clear);
@@ -32,42 +32,43 @@ var operator;
 var firstEntry = [];
 var screen = [];
 
-for (i=0; i < nums.length; i++) {
+for (i = 0; i < nums.length; i++) {
   // 1. show clicked num in display
   // 2. store clicked num
-  nums[i].addEventListener('click', function(event) {
+  nums[i].addEventListener('click', function (event) {
     display.innerHTML = event.target.innerHTML;
     numsClicked.push(display.innerHTML);
-    screen = numsClicked.join("");
-    console.log("numsClicked1:", numsClicked);
-    console.log("screen:", screen);
+    screen = numsClicked.join(""); //should show first number in display instead of one digit...not working
+//    console.log("numsClicked1:", numsClicked);
+//    console.log("screen:", screen);
   })  
 }
 
-for (i=0; i < operators.length; i++) {
-
+for (i = 0; i < operators.length; i++) {
   operators[i].addEventListener('click', function(event) {
     display.innerHTML = event.target.innerHTML;
     operator = display.innerHTML;
     firstEntry = firstEntry.concat(numsClicked);
     numsClicked = [];
-    console.log("operator:", operator);
-    console.log("firstEntry:", firstEntry);
-    console.log("numsClicked2:", numsClicked);
+//    console.log("operator:", operator);
+//    console.log("firstEntry:", firstEntry);
+//    console.log("numsClicked2:", numsClicked);
   })  
 }
 
+// 
   equals.addEventListener('click', function() {
-    firstEntry = firstEntry.join("");
-    numsClicked = numsClicked.join("");
-    console.log("numsClickedJoined:", numsClicked);
-    display.innerHTML = eval(firstEntry + operator + numsClicked);
-    //console.log("numsClicked[0];", numsClicked[0]);
+    firstEntry = firstEntry.join(""); //change array of first number string to first number
+    numsClicked = numsClicked.join(""); //change array of second number sting to second number
+//    console.log("numsClickedJoined:", numsClicked);
+    display.innerHTML = eval(firstEntry + operator + numsClicked); //do the math on first and second number
+//    console.log("numsClicked[0];", numsClicked[0]);
   })
 
-  clear.addEventListener('click', function() {
-    display.innerHTML = "";
-    numsClicked = [];
-    firstEntry = [];
-    console.log("numsArray:", numsClicked);
-  })
+//click clear button clears arrays and display
+clear.addEventListener('click', function() {
+  display.innerHTML = "";
+  numsClicked = [];
+  firstEntry = [];
+//    console.log("numsArray:", numsClicked);
+})
