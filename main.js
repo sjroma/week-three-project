@@ -38,7 +38,7 @@ for (i = 0; i < nums.length; i++) {
   nums[i].addEventListener('click', function (event) {
     display.innerHTML = event.target.innerHTML;
     numsClicked.push(display.innerHTML);
-    screen = numsClicked.join(""); //should show first number in display instead of one digit...not working
+    screen += numsClicked.join(""); //should show first number in display instead of one digit...not working
 //    console.log("numsClicked1:", numsClicked);
 //    console.log("screen:", screen);
   })  
@@ -49,14 +49,15 @@ for (i = 0; i < operators.length; i++) {
     display.innerHTML = event.target.innerHTML;
     operator = display.innerHTML;
     firstEntry = firstEntry.concat(numsClicked);
+    screen = firstEntry.join(""); 
     numsClicked = [];
-//    console.log("operator:", operator);
-//    console.log("firstEntry:", firstEntry);
-//    console.log("numsClicked2:", numsClicked);
+    console.log("operator:", operator);
+    console.log("firstEntry:", firstEntry);
+    console.log("screen:", screen);
+    console.log("numsClicked2:", numsClicked);
   })  
 }
 
-// 
   equals.addEventListener('click', function() {
     firstEntry = firstEntry.join(""); //change array of first number string to first number
     numsClicked = numsClicked.join(""); //change array of second number sting to second number
@@ -72,3 +73,5 @@ clear.addEventListener('click', function() {
   firstEntry = [];
 //    console.log("numsArray:", numsClicked);
 })
+
+// Add function for Math.sqrt() for the square root button
