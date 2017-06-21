@@ -38,9 +38,9 @@ for (i = 0; i < nums.length; i++) {
   nums[i].addEventListener('click', function (event) {
     display.innerHTML = event.target.innerHTML;
     numsClicked.push(display.innerHTML);
+    console.log("numsClicked:", numsClicked);
     screen += numsClicked.join(""); //should show first number in display instead of one digit...not working
-//    console.log("numsClicked1:", numsClicked);
-//    console.log("screen:", screen);
+    console.log("screen:", screen);
   })  
 }
 
@@ -51,10 +51,10 @@ for (i = 0; i < operators.length; i++) {
     firstEntry = firstEntry.concat(numsClicked);
     screen = firstEntry.join(""); 
     numsClicked = [];
-    console.log("operator:", operator);
-    console.log("firstEntry:", firstEntry);
-    console.log("screen:", screen);
-    console.log("numsClicked2:", numsClicked);
+//    console.log("operator:", operator);
+//    console.log("firstEntry:", firstEntry);
+//    console.log("screen:", screen);
+//    console.log("numsClicked2:", numsClicked);
   })  
 }
 
