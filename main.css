@@ -2,81 +2,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.calc-body {
+  display: flex;
+  background-color: #0d0d0d;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
+  display: grid;
+  /*  grid-template-columns: repeat(4, 1fr);*/
+  grid-template-columns: repeat(4, 6.25em);
+  /*  grid-template-rows: repeat(5, 1fr);*/
+  grid-template-rows: repeat(5, 5.25em);
+  grid-column-gap: 0.3em;
+  grid-row-gap: 0.3em;
+  margin: 0 auto;
   background-color: #0d0d0d;
-  display: flex;
-  height: 100vh;
 }
 
-.calcBody {
-  font-size: 30px;
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.top_row {
-  border: .5px solid #0d0d0d;
+.calc {
+  border: #0d0d0d;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
 }
 
 .clear {
-  border-right: 2px solid #0d0d0d;
   color: #bd8c04;
-  cursor: pointer;
+  background-color: #333;
+  border-radius: 1.5em;
 }
 
 .display {
-  align-items: center;
-  border: .02em solid #fff;
-  border-radius: .5em;
-  color: #ddd;
+  grid-column: 2/5;
   display: flex;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
   justify-content: flex-end;
-  padding-right: 0.15em;
-  width: 75%;
-}
-
-button {
+  font-size: 2em;
+  color: #f9f9f9;
   align-items: center;
+  padding-right: 0.15em;
+  border: 0.02em solid #fff;
+  border-radius: 0.5em;
+}
+
+.num,
+.decimal {
   background-color: #333;
-  border: .5px solid #0d0d0d;
-  border-radius: .5em;
   color: #ddd;
-  cursor: pointer;
-  display: flex;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.7em;
-  height: 100px;
-  justify-content: center;
-  width: 100px;
-}
-
-.second_row {
-  display: flex;
-}
-
-.third_row {
-  display: flex;
-}
-
-.fourth_row {
-  display: flex;
-}
-
-.fifth_row {
-  display: flex;
+  border-radius: 1.5em;
 }
 
 .operator {
   background-color: #333;
   color: #1a8f03;
+  border-radius: 1.5em;
 }
 
-#equals {
+.equals {
   background-color: #1a8f03;
+  color: #ddd;
+  border-radius: 1.5em;
+}
+
+button:hover,
+button:focus {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.equals:hover,
+.equals:focus {
+  background-color: #3cb125;
+  cursor: pointer;
 }
