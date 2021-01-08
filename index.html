@@ -2,52 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
-  <title>Simple JavaScript Calculator</title>
+  <title>Grid Calculator</title>
 </head>
 
-<body>
+<body class="calc-body">
   <main class="container">
-    <div class="calcBody">
-      <!-- Clear key and Display -->
-      <div class="top_row">
-        <button id="clear" class="clear" value="c">C</button>
-        <div id="display" class="display"></div>
-      </div>
-      <!-- operators and other keys -->
-      <div class="keys">
-        <div class="second_row">
-          <button class="num" value="7">7</button>
-          <button class="num" value="8">8</button>
-          <button class="num" value="9">9</button>
-          <button id="divide" class="operator">&divide;</button>
-          <!-- division symbol entity, &#247; -->
-        </div>
-        <div class="third_row">
-          <button class="num" value="4">4</button>
-          <button class="num" value="5">5</button>
-          <button class="num" value="6">6</button>
-          <button id="multiply" class="operator">&times;</button>
-          <!-- multiply symbol entity, &#215; -->
-        </div>
-        <div class="fourth_row">
-          <button class="num" value="1">1</button>
-          <button class="num" value="2">2</button>
-          <button class="num" value="3">3</button>
-          <button id="subtract" class="operator">&minus;</button>
-          <!-- subtract symbol entity, &#8722; -->
-        </div>
-        <div class="fifth_row">
-          <button class="num" value="0">0</button>
-          <button class="num" id="decimal">.</button>
-          <button id="equals">&#61;</button>
-          <button id="add" class="operator">&#43;</button>
-        </div>
-      </div>
-    </div>
+    <button class="calc clear" id="clear">C</button>
+    <div class="calc display" id="display"> </div>
+    <button class="calc num">7</button>
+    <button class="calc num">8</button>
+    <button class="calc num">9</button>
+    <button class="calc operator" id="divide">&divide;</button>
+    <button class="calc num">4</button>
+    <button class="calc num">5</button>
+    <button class="calc num">6</button>
+    <button class="calc operator" id="multiply">&times;</button>
+    <button class="calc num">1</button>
+    <button class="calc num">2</button>
+    <button class="calc num">3</button>
+    <button class="calc operator" id="subtract">&minus;</button>
+    <button class="calc num">0</button>
+    <button class="calc decimal" id="decimal">.</button>
+    <button class="calc equals" id="equals">&equals;</button>
+    <button class="calc operator" id="add">&plus;</button>
   </main>
   <script src="main.js"></script>
 </body>
