@@ -69,14 +69,24 @@
   border-radius: 1.5em;
 }
 
-button:hover,
-button:focus {
+.clear:hover, .num:hover, .operator:hover, .decimal:hover {
   background-color: #555;
   cursor: pointer;
 }
 
-.equals:hover,
-.equals:focus {
+.clear:focus, .num:focus, .operator:focus, .decimal:focus {
+  outline: none;
+  background-color: #555;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
+.equals:hover {
   background-color: #3cb125;
   cursor: pointer;
+}
+
+.equals:focus {
+  outline: none;
+  background-color: #3cb125;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.6);
 }
